@@ -1,0 +1,33 @@
+print("🤖 LinkedIn Post Bot Initialized")
+print("-" * 30)
+post_type = input("➡️ What type of post? (e.g., 'text' or 'image+text'): ").lower()
+post_topic = input("➡️ What's the topic? (e.g., 'AI', '3D animation', 'automation'): ")
+print("-" * 30)
+print("⏳ Generating post content with Gemini...")
+model = genai.GenerativeModel('gemini-2.5-flash')
+prompt = f"Write a short, professional, and engaging LinkedIn post about {post_topic}. Include relevant hashtags."
+try:
+    response = model.generate_content(prompt)
+    linkedin_post_content = response.text
+    print("\n✅ Post content generated successfully:\n")
+    print("--- Start of Post ---")
+    print(linkedin_post_content)
+    print("--- End of Post ---\n")
+except Exception as e:
+    print(f"🛑 Error generating content with Gemini: {e}")
+print("🚀 Handing over to the browser agent to post...")
+print("\n✅ Script finished. The post content is ready in the 'linkedin_post_content' variable.")
+pyperclip.copy(linkedin_post_content)
+
+
+  - click 'expand menu'
+  - click 'temporary chat'
+  - click on 'collapse menu'
+  - click on '2.5 flash' or '2.5 pro' whichever is visible
+  - select 'Fast all-around helps'
+  - click 'tools'
+  - click 'create images'
+  - click on textbox saying 'describe your image'
+  - write 'photo of a horse flying a plane'
+  - click 'submit'
+  - wait for response in chat
