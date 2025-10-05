@@ -30,4 +30,8 @@ pyperclip.copy(linkedin_post_content)
   - click on textbox saying 'describe your image'
   - write 'photo of a horse flying a plane'
   - click 'submit'
+
   - wait for response in chat
+
+
+added colab
