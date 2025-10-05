@@ -34,4 +34,4 @@ pyperclip.copy(linkedin_post_content)
   - wait for response in chat
 
 
-added colab
+added colab 2
